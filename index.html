@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/output.css">
+</head>
+<body class="flex flex-col items-center min-h-screen w-[900px] mx-auto bg-purple-950">
+    <!-- Game zone -->
+    <section class="flex items-center justify-between w-[900px] pt-[40px] pb-[50px]" id="points">
+        <div class="flex flex-col items-center justify-center border-4 pb-[20px] pt-[20px] pr-[15px] pl-[15px] border-white rounded-2xl w-fit">
+            <p class="font-bold text-2xl text-white">YOUR POINTS</p>
+            <p class="font-bold text-8xl pt-[15px] text-white" id="yourPoints">0</p>
+        </div>
+
+        <div class="flex flex-col items-center justify-center border-4 pb-[20px] pt-[20px] pr-[15px] pl-[15px] border-white rounded-2xl w-fit">
+            <p class="font-bold text-2xl text-white">AI POINTS</p>
+            <p class="font-bold text-8xl pt-[15px] text-white" id="aiPoints">0</p>
+        </div>
+    </section>
+
+    <section id="gameZone">
+        <div class="grid grid-cols-2 gap-15">
+            <audio id="clickSound" src="./audios/clickSound.mp3"></audio>
+            <img class="absolute z-1 ml-[171px] mt-[150px]" src="/images/uchli-soya.svg" alt="">
+            <img class="hand z-10 cursor-pointer" src="./images/paper.svg" alt="paper">
+            <img class="hand z-10 cursor-pointer" src="./images/scissors.svg" alt="scissors">
+            <img class="hand z-10 absolute mt-[300px] ml-[177px] cursor-pointer" src="./images/rock.svg" alt="rock">
+        </div>
+    </section>
+    <!-- Process zone -->
+    <section class="hidden w-[900px] mx-auto items-center justify-between" id="processZone">
+        <img id="player" src="./images/oval.svg" width="250px" alt="player">
+        <div class="absolute ml-[200px] flex flex-col items-center w-[500px]">
+            <audio id="winSound" src="./audios/winSound.mp3"></audio>
+            <audio id="loseSound" src="./audios/loseSound.mp3"></audio>
+            <p class="font-bold mt-[30px] absolute text-white text-[60px] " id="status"></p>
+            <button class="flex mt-[150px] flex-col items-center justify-center border-4 pb-[20px] pt-[20px] pr-[15px] pl-[15px] border-white rounded-2xl w-fit text-white hover:bg-white hover:text-black transition-all font-bold cursor-pointer" id="refreshGame">Refresh game</button>
+        </div>
+        <img id="ai" src="./images/oval.svg" width="250px" alt="ai">
+    </section>
+
+    <script src="./js/app.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+const elGameZone = document.getElementById("gameZone")
+const elProcessZone = document.getElementById("processZone")
+const elHands = document.querySelectorAll(".hand")
+const elPlayer = document.getElementById("player")
+const elAi = document.getElementById("ai")
+const elRefreshGame = document.getElementById("refreshGame")
+const elStatus = document.getElementById("status")
+const yourPoints = document.getElementById("yourPoints")
+const aiPoints = document.getElementById("aiPoints")
+const elClickSound = document.getElementById("clickSound") 
+const elWinSound = document.getElementById("winSound")
+const elLoseSound = document.getElementById("loseSound")
+
+export { elGameZone, elProcessZone, elHands, elPlayer, elAi, elRefreshGame, elStatus, yourPoints, aiPoints, elClickSound, elWinSound, elLoseSound };
