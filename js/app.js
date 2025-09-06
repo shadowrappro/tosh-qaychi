@@ -17,6 +17,7 @@ elHands.forEach((hand) => {
             setTimeout(() => {
                 const ai = aiChoose(mode)
                 console.log(ai);
+                console.log(mode);
                 elAi.src = `/images/${ai}.svg`
                 const winner = checkWinner(ai,player)
                 elStatus.innerText = winner
