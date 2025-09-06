@@ -3,7 +3,7 @@ export const {rock, paper, scissors, lizard, spock} = {
     paper: "paper",
     scissors: "scissors",
     lizard: "lizard",
-    spock: "spok",
+    spock: "spock",
 };
 
 export const hands = [rock, paper, scissors, lizard, spock];

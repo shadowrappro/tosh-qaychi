@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tosh-Qaychi-Qog'oz</title>
     <link rel="stylesheet" href="/css/output.css">
+    <link rel="stylesheet" href="/css/stlye.css">
 </head>
 <body class="flex flex-col items-center min-h-screen w-[900px] mx-auto bg-purple-950">
     <!-- Game zone -->
@@ -21,12 +22,15 @@
     </section>
 
     <section id="gameZone">
-        <div class="grid grid-cols-2 gap-15">
+        <div class="grid grid-cols-2 gap-15 group" data-mode="EASY" id="modeWrapper">
             <audio id="clickSound" src="./audios/clickSound.mp3"></audio>
-            <img class="absolute z-1 ml-[171px] mt-[150px]" src="/images/uchli-soya.svg" alt="">
-            <img class="hand z-10 cursor-pointer" src="./images/paper.svg" alt="paper">
-            <img class="hand z-10 cursor-pointer" src="./images/scissors.svg" alt="scissors">
-            <img class="hand z-10 absolute mt-[300px] ml-[177px] cursor-pointer" src="./images/rock.svg" alt="rock">
+            <img class="absolute soya z-1 ml-[171px] mt-[150px]" src="/images/uchli-soya.svg" alt="">
+            <img class="hand paper z-10 cursor-pointer" src="./images/paper.svg" alt="paper">
+            <img class="hand scissors z-10 cursor-pointer" src="./images/scissors.svg" alt="scissors">
+            <img class="hand rock z-10 absolute mt-[300px] ml-[177px] cursor-pointer" src="./images/rock.svg" alt="rock">
+            <img class="hand lizard z-10 cursor-pointer hidden group-data-[mode=HARD]:block" src="./images/lizard.svg" alt="lizard">
+            <img class="hand spock z-10 cursor-pointer hidden group-data-[mode=HARD]:block" src="./images/spock.svg" alt="spock">
+            <img class="beshBurchak hidden" src="./images/beshBurchak.svg" alt="besh-burchak-soya">
         </div>
     </section>
     <!-- Process zone -->
@@ -41,8 +45,8 @@
         <img id="ai" src="./images/oval.svg" width="250px" alt="ai">
     </section>
     <section class="w-[900px] flex mt-[250px] justify-between gap-5">
-        <button class="border pb-[20px] pt-[20px] pr-[20px] pl-[20px] w-fit font-bold text-white hover:text-black hover:bg-white cursor-pointer border-white rounded-[8px] hover:border-black" id="roles">RULES</button>
-        <button class="border pb-[20px] pt-[20px] pr-[20px] pl-[20px] w-fit font-bold text-white hover:text-black hover:bg-white cursor-pointer border-white rounded-[8px] hover:border-black" id="mode">MODE</button>
+        <button class="border pb-[20px] pt-[20px] pr-[20px] pl-[20px] w-fit font-bold text-white hover:text-black hover:bg-white cursor-pointer border-white rounded-[8px] hover:border-black" id="roles">ROLES</button>
+        <button class="border pb-[20px] pt-[20px] pr-[20px] pl-[20px] w-fit font-bold text-white hover:text-black hover:bg-white cursor-pointer border-white rounded-[8px] hover:border-black" id="modeChangerBtn">HARD</button>
     </section>
 
     <script src="./js/app.js" type="module"></script>

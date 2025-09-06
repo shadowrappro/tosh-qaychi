@@ -1,0 +1,45 @@
+.hardMode > .hand {
+    width: 150px;
+    position: absolute;
+    margin-left: 150px;
+}
+.hardMode > .rock {
+    position: absolute;
+    margin-left: -180px;
+    margin-top: 60px;
+
+}
+.hardMode > .paper {
+    margin-left: -20px;
+    margin-top: -60px;
+}
+
+ .hardMode > .scissors {
+    margin-top: 0px;
+    margin-top: 60px;
+}
+
+.hardMode > .spock {
+    margin-top: 240px;
+    margin-left: -120px; 
+}
+
+.hardMode > .lizard { 
+    margin-left: 100px;
+    margin-top: 240px;
+}
+
+.hardMode > .soya {
+    display: none;
+}
+
+.hardMode > .beshBurchak {
+    display: block;
+    position: absolute;
+    margin-left: -110px;
+    width: 350px;
+}
+
+.hardMode {
+    margin-bottom: 300px;
+}

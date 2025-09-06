@@ -10,7 +10,8 @@ const aiPoints = document.getElementById("aiPoints")
 const elClickSound = document.getElementById("clickSound") 
 const elWinSound = document.getElementById("winSound")
 const elLoseSound = document.getElementById("loseSound")
-const elMode = document.getElementById("mode")
+const elModeChangerButton = document.getElementById("modeChangerBtn")
 const elRoles = document.getElementById("roles")
+const elModeWrapper = document.getElementById("modeWrapper")
 
-export { elGameZone, elProcessZone, elHands, elPlayer, elAi, elRefreshGame, elStatus, yourPoints, aiPoints, elClickSound, elWinSound, elLoseSound, elMode, elRoles };
+export { elModeWrapper, elGameZone, elProcessZone, elHands, elPlayer, elAi, elRefreshGame, elStatus, yourPoints, aiPoints, elClickSound, elWinSound, elLoseSound, elModeChangerButton, elRoles };
