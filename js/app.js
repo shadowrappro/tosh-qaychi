@@ -13,13 +13,13 @@ function showResult(playerSrc, aiSrc, winner) {
     setTimeout(() => {
         elAi.src = aiSrc;
         elStatus.innerText = winner;
+
+        if (winner === "You win!") {
+            yourPoints.textContent = Number(yourPoints.textContent) + 1;
+        } else if (winner === "You lose") {
+            aiPoints.textContent = Number(aiPoints.textContent) + 1;
+        }
     }, 1000)
-    
-    if (winner === "You win!") {
-        yourPoints.textContent = Number(yourPoints.textContent) + 1;
-    } else if (winner === "You lose") {
-        aiPoints.textContent = Number(aiPoints.textContent) + 1;
-    }
 }
 
 elHands.forEach((hand) => {
