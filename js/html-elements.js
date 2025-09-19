@@ -13,5 +13,6 @@ const elLoseSound = document.getElementById("loseSound")
 const elModeChangerButton = document.getElementById("modeChangerBtn")
 const elRoles = document.getElementById("roles")
 const elModeWrapper = document.getElementById("modeWrapper")
+const channel = new BroadcastChannel("TheNewYorkTimes")
 
-export { elModeWrapper, elGameZone, elProcessZone, elHands, elPlayer, elAi, elRefreshGame, elStatus, yourPoints, aiPoints, elClickSound, elWinSound, elLoseSound, elModeChangerButton, elRoles };
+export { elModeWrapper, elGameZone, elProcessZone, elHands, elPlayer, elAi, elRefreshGame, elStatus, yourPoints, aiPoints, elClickSound, elWinSound, elLoseSound, elModeChangerButton, elRoles, channel };
