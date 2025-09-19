@@ -12,9 +12,9 @@ function showResult(playerSrc, aiSrc, winner) {
     elPlayer.src = playerSrc;
     setTimeout(() => {
         elAi.src = aiSrc;
+        elStatus.innerText = winner;
     }, 1000)
-    elStatus.innerText = winner;
-
+    
     if (winner === "You win!") {
         yourPoints.textContent = Number(yourPoints.textContent) + 1;
     } else if (winner === "You lose") {
@@ -28,18 +28,15 @@ elHands.forEach((hand) => {
         if (!isRemote) {
             const player = evt.target.alt;
             const playerSrc = evt.target.src;
-
             const ai = aiChoose(mode);
             const aiSrc = `/images/${ai}.svg`;
             const winner = checkWinner(ai, player);
-
             channel.postMessage({
                 type: "result",
                 playerSrc,
                 aiSrc,
                 winner
             });
-
             showResult(playerSrc, aiSrc, winner);
         }
     });
